@@ -149,9 +149,9 @@ changeBox.addEventListener("click", function(){
 //bank offer logic function
 function calcOffer(){
 	var valuesSum = shuffledValues.reduce(function(a, b) { return a + b; }, 0);
-	var randomPercentage = (Math.floor(Math.random() * 10) + 1) * 0.1 + 1;
-	var offer = Math.round((valuesSum/shuffledValues.length)*randomPercentage/100) * 100;
-	return offer;
+	var randomPercentage = Math.random() * 50 + 1;
+	var offer = (valuesSum/shuffledValues.length) * randomPercentage/100;
+	return offer.toFixed(0);
 }
 function show(div){
 	div.style.display = "block";
