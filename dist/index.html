@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Deal or No Deal Game</title>
+  <title>APAOL - Money Time</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -17,8 +17,11 @@
 
 </head>
 <body>
-	<div id="logo">
-		<img class="logoImg" src="https://i.ibb.co/kKpRnSk/dealLogo.png">
+  <audio id="player" autoplay loop>
+    <source src="C:/Users/yann/Desktop/APOAL-master/musics/nappe19.mp3" type="audio/mp3">
+</audio>
+  	<div id="logo">
+		<img class="logoImg" src="http://apoal.baptcm.fr/assets/apoallogo.png">
 	</div>
 	<div id="boxContainer">
 		<div class="box"><span class="boxNr">1</span><span class="boxValue"></span></div>
@@ -77,22 +80,22 @@
 	<div id="bank">
 		<div id="bankContent">
 			<img class="bankLogo"src="https://i.ibb.co/s9HN0Xn/bankimg.png">
-			<div class="bankTitle">La banque vous offre:</div>
+			<div class="bankTitle">La banque vous offre :</div>
 			<div class="bankOffer"></div>
 			<button id="yesDeal" class="buttons">Accepter</button>
 			<button id="noDeal" class="buttons">Refuser</button>
-			<div id="prevOffers">Offre précèdente: none</div>
+			<div id="prevOffers">Offres précèdentes : none</div>
 		</div>
 	</div>
 	<div id="finished">
 		<div id="finishedContent">
-			<div class="modalText">Félicitations, vous avez gagné:</div>
+			<div class="modalText">Félicitations, vous avez gagné :</div>
 			<div id="winnings"></div>
 		</div>
 	</div>
 	<div id="lastDeal">
 		<div id="lastDealContent">
-			<div class="modalText">Souhaitez-vous garder votre boite ou l'échanger?</div>
+			<div class="modalText">Souhaitez-vous garder votre boite ou l'échanger ?</div>
 			<button id="keepBox" class="buttons">Garder</button>
 			<button id="changeBox" class="buttons">Echanger</button>
 		</div>

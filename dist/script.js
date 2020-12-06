@@ -1,4 +1,4 @@
-//create an array that contains the values 
+//create an array that contains the values
 var moneyValues = [ 0.01,0.05,0.10,0.15,0.25,0.50,0.75,1,2,3,4,5,10,15,20,25,30,40,50,75,100,150,200,300 ];
 //all elements
 var boxes = document.querySelectorAll(".box");
@@ -16,7 +16,7 @@ var chosenBox = 0;
 var previousOffers = [];
 var openedBoxes = 0;
 var winnings = document.getElementById("winnings");
-var lastDeal = document.getElementById("lastDeal");	
+var lastDeal = document.getElementById("lastDeal");
 var keepBox = document.getElementById("keepBox");
 var changeBox = document.getElementById("changeBox");
 var winningBox = 0;
@@ -31,7 +31,7 @@ function chooseBox(){
 	for(var i = 0; i < chooseBoxButton.length; i++){
 		chooseBoxButton[i].addEventListener("click", function(){
 			chosenBox = this.textContent;
-			chooseBox.style.display = "none"; 
+			chooseBox.style.display = "none";
 			addValuesNStuff();
 		})
 	}
@@ -80,7 +80,7 @@ function addValuesNStuff(){
 			if(chosenBox !== boxNr[j].textContent){
 				//opening boxes logic
 				boxes[j].addEventListener("click", function(){
-					boxValue[j].classList.remove("hideValue"); 
+					boxValue[j].classList.remove("hideValue");
  					boxValue[j].classList.add("showValue");
  					boxNr[j].classList.add("hideValue");
 					this.classList.add("openedBox");
@@ -102,7 +102,7 @@ function addValuesNStuff(){
 						}
 					}
 					//show bank offer
-					if(openedBoxes === 5 || openedBoxes === 10 || openedBoxes === 15 || openedBoxes === 18 || openedBoxes === 21){
+					if(openedBoxes === 6 || openedBoxes === 11 || openedBoxes === 15 || openedBoxes === 18 || openedBoxes === 20 || openedBoxes === 21){
 						calcOffer();
 						show(bank);
 						animateValue(bankOffer, 0, calcOffer(), 1000);
@@ -118,7 +118,7 @@ function addValuesNStuff(){
 				winningBox = boxValue[j].textContent;
 				console.log("what");
 			}
-		})(i);	
+		})(i);
 	}
 }
 //bank offer logic
@@ -176,18 +176,18 @@ function shuffleArray(array){
 }
 
 //FUNCTION FROM STACK OVERFLOW. CREDITS: jfriend00 on Stack Overflow!
-function animateValue(id, start, end, duration) {    
+function animateValue(id, start, end, duration) {
     var obj = id;
     var range = end - start;
     var minTimer = 50;
     var stepTime = Math.abs(Math.floor(duration / range));
-    
+
     stepTime = Math.max(stepTime, minTimer);
 
     var startTime = new Date().getTime();
     var endTime = startTime + duration;
     var timer;
-  
+
     function run() {
         var now = new Date().getTime();
         var remaining = Math.max((endTime - now) / duration, 0);
@@ -196,7 +196,7 @@ function animateValue(id, start, end, duration) {
         if (value == end) {
             clearInterval(timer);
         }
-    }    
+    }
     timer = setInterval(run, stepTime);
     run();
 }
